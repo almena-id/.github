@@ -19,18 +19,19 @@ The platform roadmap also includes decentralized applications, persistence, mess
 
 ---
 
-## How the work is organized
+## Repositories
 
-Day-to-day code and sites are split across **four projects**. Together they cover protocol and node software, product shells for issuers and holders, and public documentation and marketing.
+Day-to-day development happens in **independent repositories**. Clone and contribute in the repo that matches what you are working on.
 
-| Project | Role | Stack (high level) |
-|---------|------|---------------------|
-| **[almena](https://github.com/almena-network/almena)** | Core platform: **daemon** (gRPC API and node logic), **Almena** desktop app (issuers and requesters), **CLI** (operator TUI), and **protobuf** definitions shared by clients. | Rust (tonic, daemon and tooling), Tauri v2 + React + Vite for the desktop shell |
+| Repository | Role | Stack (high level) |
+|------------|------|---------------------|
+| **[almena](https://github.com/almena-network/almena)** | Core platform: **daemon** (gRPC API and node logic), **desktop** app (issuers and requesters), **CLI** (operator TUI), and **protobuf** definitions shared by clients. | Rust (tonic, daemon and tooling), Tauri v2 + React + Vite for the desktop shell |
 | **[wallet](https://github.com/almena-network/wallet)** | **Holder** experience: DIDs, credentials, and keys on device; mobile-first UI. Integrates with the daemon over **HTTP REST** (`/api/v1/…`), not gRPC. | Tauri v2 + React + TypeScript |
-| **docs** | Official documentation site: user guides, integrator-oriented material, and developer deep-dives. Bilingual **English** and **Spanish**. | Docusaurus, pnpm |
-| **web** | Public marketing and landing experience aligned with [almena.network](https://almena.network). | Astro, pnpm |
+| **[registry](https://github.com/almena-network/registry)** | Operator-facing portal for creating and managing on-network registries (for example credential issuers). | Next.js (App Router) + React + TypeScript |
+| **[docs](https://github.com/almena-network/docs)** | Official documentation site: user guides, integrator-oriented material, and developer deep-dives. Bilingual **English** and **Spanish**. | Docusaurus, pnpm |
+| **[web](https://github.com/almena-network/web)** | Public marketing and landing experience aligned with [almena.network](https://almena.network). | Astro, pnpm |
 
-In the **[almena-network](https://github.com/almena-network/almena-network)** umbrella repository, **almena** and **wallet** are linked as **Git submodules** so the hub stays in sync with their upstream repos; **docs** and **web** live in the same tree (clone once, work everywhere).
+Each repository’s **README** is the source of truth for setup, tasks, and contribution.
 
 ---
 
@@ -44,8 +45,10 @@ In the **[almena-network](https://github.com/almena-network/almena-network)** um
 
 ## Quick links
 
-- [Umbrella repository](https://github.com/almena-network/almena-network) (submodules + docs + web)
 - [almena](https://github.com/almena-network/almena) (daemon, desktop, CLI, proto)
 - [wallet](https://github.com/almena-network/wallet)
+- [registry](https://github.com/almena-network/registry)
+- [docs](https://github.com/almena-network/docs)
+- [web](https://github.com/almena-network/web)
 - [Website](https://almena.network)
 - [Documentation](https://docs.almena.network)
