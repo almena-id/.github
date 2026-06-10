@@ -1,7 +1,7 @@
 <h1 align="center">Almena Network</h1>
 
 <p align="center">
-  <strong>Decentralized identity. Owned by you. Trusted by everyone.</strong>
+  <strong>Decentralized communication. Owned by you. Trusted by no one else.</strong>
 </p>
 
 <p align="center">
@@ -13,41 +13,38 @@
 
 ## What is Almena Network?
 
-Almena Network is a decentralized identity platform built on W3C standards (DIDs, Verifiable Credentials). People and organizations can create, issue, and verify digital identities without a single intermediary owning the directory.
+Almena Network is a decentralized communication platform. Messages are end-to-end encrypted and routed through onion paths over a permissionless network of operator-run nodes. No central server stores user content or metadata.
 
-The platform roadmap also includes decentralized applications, persistence, messaging, coordination, and ordering.
+Design priorities: peer-to-peer and federated architectures, user sovereignty over data, open protocols, and privacy as a first-class concern.
 
 ---
 
 ## Repositories
 
-Day-to-day development happens in **independent repositories**. Clone and contribute in the repo that matches what you are working on.
+| Repository | Role | Stack |
+|------------|------|-------|
+| **[client](https://github.com/almena-network/client)** | End-user P2P messenger — identity, contacts, messaging UI, calls, and group conversations. Targets desktop (macOS, Windows, Linux) and mobile (iOS, Android). | Tauri v2 · Rust · React · TypeScript |
+| **[node](https://github.com/almena-network/node)** | Network node software — bundles a **service-node** daemon (onion routing relay, message storage, swarm replication) and a **blockchain-node** daemon (proof-of-work chain, on-chain staking, service-node registry). Ships as a desktop operator app. | Tauri v2 · Rust (Cargo workspace) · React · TypeScript |
+| **[docs](https://github.com/almena-network/docs)** | Official documentation site. Sections for users, integrators, and developers. Bilingual **English / Spanish**. | Docusaurus 3 · pnpm |
+| **[web](https://github.com/almena-network/web)** | Public marketing and landing site at [almena.network](https://almena.network). Covers the messenger product and network infrastructure. Bilingual **English / Spanish**. | Astro 6 · pnpm |
 
-| Repository | Role | Stack (high level) |
-|------------|------|---------------------|
-| **[almena](https://github.com/almena-network/almena)** | Core platform: **daemon** (gRPC API and node logic), **desktop** app (issuers and requesters), **CLI** (operator TUI), and **protobuf** definitions shared by clients. | Rust (tonic, daemon and tooling), Tauri v2 + React + Vite for the desktop shell |
-| **[wallet](https://github.com/almena-network/wallet)** | **Holder** experience: DIDs, credentials, and keys on device; mobile-first UI. Integrates with the daemon over **HTTP REST** (`/api/v1/…`), not gRPC. | Tauri v2 + React + TypeScript |
-| **[registry](https://github.com/almena-network/registry)** | Operator-facing portal for creating and managing on-network registries (for example credential issuers). | Next.js (App Router) + React + TypeScript |
-| **[docs](https://github.com/almena-network/docs)** | Official documentation site: user guides, integrator-oriented material, and developer deep-dives. Bilingual **English** and **Spanish**. | Docusaurus, pnpm |
-| **[web](https://github.com/almena-network/web)** | Public marketing and landing experience aligned with [almena.network](https://almena.network). | Astro, pnpm |
-
-Each repository’s **README** is the source of truth for setup, tasks, and contribution.
+Each repository's **README** is the source of truth for setup, tasks, and contribution guidelines.
 
 ---
 
-## Integration at a glance
+## How it fits together
 
-- **Almena** (desktop) and the **CLI** talk to **almenad** over **gRPC** using the canonical protos in the **almena** repo.
-- The **wallet** uses the daemon’s **REST** surface for the flows that require a signed, HTTP-friendly contract.
-- **Docs** and **web** ship as static sites; they describe and promote the same components above.
+- The **client** sends and receives messages through **service nodes** using layered onion encryption. No service node sees both sender and recipient.
+- **Service nodes** and **blockchain nodes** are run by independent operators using the **node** desktop app. The blockchain tracks which service nodes are active and enforces staking.
+- Wire format and cryptographic primitives (Ed25519, X25519, ChaCha20-Poly1305, BLAKE2b) are defined in the `almena-protocol` crate inside the `node` repository. The `client` depends on it directly so both ends stay byte-compatible.
+- **Docs** and **web** are static sites; they describe and promote the components above.
 
 ---
 
 ## Quick links
 
-- [almena](https://github.com/almena-network/almena) (daemon, desktop, CLI, proto)
-- [wallet](https://github.com/almena-network/wallet)
-- [registry](https://github.com/almena-network/registry)
+- [client](https://github.com/almena-network/client)
+- [node](https://github.com/almena-network/node)
 - [docs](https://github.com/almena-network/docs)
 - [web](https://github.com/almena-network/web)
 - [Website](https://almena.network)
