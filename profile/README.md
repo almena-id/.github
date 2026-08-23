@@ -1,51 +1,54 @@
 <h1 align="center">Almena Network</h1>
 
 <p align="center">
-  <strong>Decentralized communication. Owned by you. Trusted by no one else.</strong>
+  <strong>A decentralized network. No account, no central authority, no personal data.</strong>
 </p>
 
 <p align="center">
-  <a href="https://almena.network">Website</a> &middot;
-  <a href="https://docs.almena.network">Documentation</a>
+  <a href="https://almena.network">almena.network</a>
 </p>
 
 ---
 
-## What is Almena Network?
+## What Almena is
 
-Almena Network is a decentralized communication platform. Messages are end-to-end encrypted and routed through onion paths over a permissionless network of operator-run nodes. No central server stores user content or metadata.
+A decentralized network, peer-to-peer over [iroh](https://github.com/n0-computer/iroh), and
+**`almena`** is the whole of what the project builds: one codebase — Tauri 2, Rust, React —
+for iOS, Android, Windows, macOS and Linux. **On a computer the application is the node**, and
+the network is composed of the desktop installations taking part in it. On a phone or a tablet
+the same application reaches that network without being a node of it. There is no daemon beside
+it and no API between the two.
 
-Design priorities: peer-to-peer and federated architectures, user sovereignty over data, open protocols, and privacy as a first-class concern.
+A participant is a key generated on its own device. There is no account and no sign-up, and
+nothing ever asks who is behind it.
 
----
+A node belongs to the network whose configuration it read — `almena.network` for production,
+`dev.almena.network` for development — published in DNS under that origin and signed, so a
+zone the project runs hands a node a document and never a decision. The origin is the
+operator's to replace, and a node that already knows peers never asks again.
+
+> **Under construction.** No release has been published, and the peer-to-peer layer is not
+> written yet: a build today joins no network, and its first screen says exactly that.
+
+## Principles
+
+- **Transparency.** No telemetry, no analytics, no crash reporting, no update ping, in any
+  build — a program of ours contacts only hosts its operator asked for. What is not built yet
+  is stated on the screen rather than invented.
+- **Anonymity.** A key on a device, and no name of ours above it.
+- **No personal data.** Never stored — not encrypted, not hashed, not temporarily.
+- **Traceability.** Every document that matters is signed and checkable offline by anyone
+  holding it, traceable to a key and no further.
+
+Two standing decisions travel with them: **no central authority** — switching off everything
+the project runs leaves the network running — and **IPv6 only**.
 
 ## Repositories
 
-| Repository | Role | Stack |
-|------------|------|-------|
-| **[client](https://github.com/almena-network/client)** | End-user P2P messenger — identity, contacts, messaging UI, calls, and group conversations. Targets desktop (macOS, Windows, Linux) and mobile (iOS, Android). | Tauri v2 · Rust · React · TypeScript |
-| **[node](https://github.com/almena-network/node)** | Network node software — bundles a **service-node** daemon (onion routing relay, message storage, swarm replication) and a **blockchain-node** daemon (proof-of-work chain, on-chain staking, service-node registry). Ships as a desktop operator app. | Tauri v2 · Rust (Cargo workspace) · React · TypeScript |
-| **[docs](https://github.com/almena-network/docs)** | Official documentation site. Sections for users, integrators, and developers. Bilingual **English / Spanish**. | Docusaurus 3 · pnpm |
-| **[web](https://github.com/almena-network/web)** | Public marketing and landing site at [almena.network](https://almena.network). Covers the messenger product and network infrastructure. Bilingual **English / Spanish**. | Astro 6 · pnpm |
+| Repository | What it is |
+| --- | --- |
+| [almena](https://github.com/almena-network/almena) | The application, and on a computer the node itself. Tauri 2 · Rust · React · TypeScript. |
 
-Each repository's **README** is the source of truth for setup, tasks, and contribution guidelines.
-
----
-
-## How it fits together
-
-- The **client** sends and receives messages through **service nodes** using layered onion encryption. No service node sees both sender and recipient.
-- **Service nodes** and **blockchain nodes** are run by independent operators using the **node** desktop app. The blockchain tracks which service nodes are active and enforces staking.
-- Wire format and cryptographic primitives (Ed25519, X25519, ChaCha20-Poly1305, BLAKE2b) are defined in the `almena-protocol` crate inside the `node` repository. The `client` depends on it directly so both ends stay byte-compatible.
-- **Docs** and **web** are static sites; they describe and promote the components above.
-
----
-
-## Quick links
-
-- [client](https://github.com/almena-network/client)
-- [node](https://github.com/almena-network/node)
-- [docs](https://github.com/almena-network/docs)
-- [web](https://github.com/almena-network/web)
-- [Website](https://almena.network)
-- [Documentation](https://docs.almena.network)
+Each repository's own `README` is the source of truth for what it needs and how to build and
+run it. The project's working agreements — the rules the code is held to, and the specs of work
+agreed in writing before it was built — live in a repository of their own, `almena-network`.
