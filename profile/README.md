@@ -13,11 +13,12 @@
 ## What Almena is
 
 A decentralized network, peer-to-peer over [iroh](https://github.com/n0-computer/iroh), and
-**`almena`** is the whole of what the project builds: one codebase — Tauri 2, Rust, React —
-for iOS, Android, Windows, macOS and Linux. **On a computer the application is the node**, and
-the network is composed of the desktop installations taking part in it. On a phone or a tablet
-the same application reaches that network without being a node of it. There is no daemon beside
-it and no API between the two.
+**`almena`** is the application at the centre of it: one codebase — Tauri 2, Rust, React — for
+Windows, macOS and Linux. **The application is the node**: there is no daemon beside it and no
+API between the two, and the network is composed of the computers taking part in it.
+
+Almena on a phone or a tablet is a **client** of that network rather than a node of it, and it
+is built separately, in `client`.
 
 A participant is a key generated on its own device. There is no account and no sign-up, and
 nothing ever asks who is behind it.
@@ -47,8 +48,11 @@ the project runs leaves the network running — and **IPv6 only**.
 
 | Repository | What it is |
 | --- | --- |
-| [almena](https://github.com/almena-network/almena) | The application, and on a computer the node itself. Tauri 2 · Rust · React · TypeScript. |
+| [almena](https://github.com/almena-network/almena) | The application, and the node itself, on Windows, macOS and Linux. Tauri 2 · Rust · React · TypeScript. |
+| [client](https://github.com/almena-network/client) | Almena on a phone or a tablet: a client of the network, not a node of it. |
+| [agent](https://github.com/almena-network/agent) | `almena-agent`, the AI agent the application runs beside itself. Python. |
+| [web](https://github.com/almena-network/web) | The public site at [almena.network](https://almena.network). Astro. |
 
 Each repository's own `README` is the source of truth for what it needs and how to build and
-run it. The project's working agreements — the rules the code is held to, and the specs of work
-agreed in writing before it was built — live in a repository of their own, `almena-network`.
+run it. The project's working agreements — the rules the code is held to — live in a repository
+of their own, `almena-network`.
