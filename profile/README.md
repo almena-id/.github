@@ -23,10 +23,12 @@ is built separately, in `client`.
 A participant is a key generated on its own device. There is no account and no sign-up, and
 nothing ever asks who is behind it.
 
-A node belongs to the network whose configuration it read — `almena.network` for production,
-`dev.almena.network` for development — published in DNS under that origin and signed, so a
-zone the project runs hands a node a document and never a decision. The origin is the
-operator's to replace, and a node that already knows peers never asks again.
+A node reads its first configuration from an origin — `almena.network` for production,
+`dev.almena.network` for development — published in DNS there and signed, so a zone the project
+runs hands a node a document and never a decision. The origin is the operator's to replace, and
+a node that can still reach somebody it has spoken to never asks again. Which network a node is
+actually on is decided by the protocol name it offers when it greets another node, not by the
+origin it read: the origin is only where its first addresses came from.
 
 > **Under construction.** No release has been published, and the peer-to-peer layer is not
 > written yet: a build today joins no network, and its first screen says exactly that.
@@ -42,7 +44,11 @@ operator's to replace, and a node that already knows peers never asks again.
   holding it, traceable to a key and no further.
 
 Two standing decisions travel with them: **no central authority** — switching off everything
-the project runs leaves the network running — and **IPv6 only**.
+the project runs leaves the network running for everybody already on it, and costs new nodes the
+one thing it is for, which is finding a first peer through us instead of through somebody who
+already has one — and **IPv6 only**, with no second address family and no traversal machinery of
+any kind. A node listens on a global address or it dials out and holds what it made; both take
+part in full, and which one a node is gets measured rather than assumed.
 
 ## Repositories
 
