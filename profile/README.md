@@ -28,7 +28,7 @@ Identity has to outlive the cryptography it rests on. Alongside the platform, Al
 | [develop](https://github.com/almena-id/develop) | The whole network on one machine, behind a single Caddy, for local development. |
 | [docu](https://github.com/almena-id/docu) | The documentation site at [docs.almena.id](https://docs.almena.id): guides and reference for the people and organizations that use the platform, in English and Spanish. Astro + Starlight. |
 | [landing](https://github.com/almena-id/landing) | The site at [almena.id](https://almena.id). Astro. |
-| [ledger](https://github.com/almena-id/ledger) | The ledger of the Almena Network. |
+| [ledger](https://github.com/almena-id/ledger) | The ledger of Almena ID. |
 | [mediator](https://github.com/almena-id/mediator) | A DIDComm v2.0 mailbox and relay for wallets, with live pickup, push wake-ups and TURN credentials for calls. Rust. |
 | [registry](https://github.com/almena-id/registry) | The web portal where organizations set up their tenant, issuers, verifiers and credential templates. Next.js. |
 | [spec](https://github.com/almena-id/spec) | The platform specification, published in English and Spanish. |
