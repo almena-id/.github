@@ -21,18 +21,19 @@ Identity has to outlive the cryptography it rests on. Alongside the platform, Al
 
 | Repository | What it is |
 |------------|------------|
-| [wallet](https://github.com/almena-id/wallet) | The Almena Wallet: holds your identity, contacts, messages, calls and credentials. Tauri v2 + React, on mobile and desktop. |
+| [agent](https://github.com/almena-id/agent) | The Almena AI agent, reachable by other agents over A2A. Python + Claude. |
+| [almena](https://github.com/almena-id/almena) | The `almena` command-line interface. |
+| [api](https://github.com/almena-id/api) | The backend behind the registry and the catalog: tenants, DIDs, templates and issuance. FastAPI on PostgreSQL. |
+| [catalog](https://github.com/almena-id/catalog) | The public catalog at [catalog.almena.id](https://catalog.almena.id), where anyone with an Almena wallet finds the services issuers publish to request credentials. Next.js. |
+| [develop](https://github.com/almena-id/develop) | The whole network on one machine, behind a single Caddy, for local development. |
+| [docu](https://github.com/almena-id/docu) | The documentation site at [docs.almena.id](https://docs.almena.id): guides and reference for the people and organizations that use the platform, in English and Spanish. Astro + Starlight. |
+| [landing](https://github.com/almena-id/landing) | The site at [almena.id](https://almena.id). Astro. |
+| [ledger](https://github.com/almena-id/ledger) | The ledger of the Almena Network. |
 | [mediator](https://github.com/almena-id/mediator) | A DIDComm v2.0 mailbox and relay for wallets, with live pickup, push wake-ups and TURN credentials for calls. Rust. |
 | [registry](https://github.com/almena-id/registry) | The web portal where organizations set up their tenant, issuers, verifiers and credential templates. Next.js. |
-| [catalog](https://github.com/almena-id/catalog) | The public catalog at [catalog.almena.id](https://catalog.almena.id), where anyone with an Almena wallet finds the services issuers publish to request credentials. Next.js. |
-| [api](https://github.com/almena-id/api) | The backend behind the registry and the catalog: tenants, DIDs, templates and issuance. FastAPI on PostgreSQL. |
-| [ledger](https://github.com/almena-id/ledger) | The ledger of the Almena Network. |
-| [almena](https://github.com/almena-id/almena) | The `almena` command-line interface. |
-| [agent](https://github.com/almena-id/agent) | The Almena AI agent, reachable by other agents over A2A. Python + Claude. |
 | [spec](https://github.com/almena-id/spec) | The platform specification, published in English and Spanish. |
-| [landing](https://github.com/almena-id/landing) | The site at [almena.id](https://almena.id). Astro. |
 | [status](https://github.com/almena-id/status) | The status page at [status.almena.id](https://status.almena.id): whether each service of the network works right now, its last 90 days, and announced incidents and maintenance. Next.js. |
-| [develop](https://github.com/almena-id/develop) | The whole network on one machine, behind a single Caddy, for local development. |
+| [wallet](https://github.com/almena-id/wallet) | The Almena Wallet: holds your identity, contacts, messages, calls and credentials. Tauri v2 + React, on mobile and desktop. |
 
 ## Get involved
 
