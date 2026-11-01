@@ -28,15 +28,12 @@ Identity has to outlive the cryptography it rests on. Alongside the platform, Al
 | [develop](https://github.com/almena-id/develop) | The whole network on one machine, behind a single Caddy, for local development. |
 | [docu](https://github.com/almena-id/docu) | The documentation site at [docs.almena.id](https://docs.almena.id): guides and reference for the people and organizations that use the platform, in English and Spanish. Astro + Starlight. |
 | [homebrew-tap](https://github.com/almena-id/homebrew-tap) | The Homebrew tap that installs `almena` on macOS and Linux: `brew install almena-id/tap/almena`. |
-| [landing](https://github.com/almena-id/landing) | The site at [almena.id](https://almena.id). Astro. |
-| [ledger](https://github.com/almena-id/ledger) | The ledger of Almena ID. |
 | [mediator](https://github.com/almena-id/mediator) | A DIDComm v2.0 mailbox and relay for wallets, with live pickup, push wake-ups and TURN credentials for calls. Rust. |
 | [registry](https://github.com/almena-id/registry) | The web portal where organizations set up their tenant, issuers, verifiers and credential templates. Next.js. |
 | [scoop-bucket](https://github.com/almena-id/scoop-bucket) | The Scoop bucket that installs `almena` on Windows. |
-| [spec](https://github.com/almena-id/spec) | The platform specification, published in English and Spanish. |
 | [status](https://github.com/almena-id/status) | The status page at [status.almena.id](https://status.almena.id): whether each service of the network works right now, its last 90 days, and announced incidents and maintenance. Next.js. |
 | [wallet](https://github.com/almena-id/wallet) | The Almena Wallet: holds your identity, contacts, messages, calls and credentials. Tauri v2 + React, on mobile and desktop. |
 
 ## Get involved
 
-Almena ID is under active development. Read the specification, open an issue or start a discussion in the repository it concerns — feedback on the protocols and the user experience is especially welcome.
+Almena ID is under active development. Read the [documentation](https://docs.almena.id), open an issue or start a discussion in the repository it concerns — feedback on the protocols and the user experience is especially welcome.
