@@ -4,7 +4,7 @@
 
 Almena ID is an open platform for decentralized digital identity. People keep their identity and their credentials in a wallet on their own device; organizations issue and verify credentials through the registry; and every exchange between them travels end-to-end encrypted over [DIDComm Messaging v2.0](https://identity.foundation/didcomm-messaging/spec/v2.0/), through mediators that never see what they carry.
 
-Launching on **November 11, 2026** at [almena.id](https://almena.id).
+Coming soon at [almena.id](https://almena.id).
 
 ## Principles
 
