@@ -9,7 +9,7 @@ Coming soon at [almena.id](https://almena.id).
 ## Principles
 
 - **Your identity is yours.** Keys are born on your device from a recovery phrase and never leave it. No account, no central store of who you are.
-- **Private by design.** Every contact gets a DID of its own, so no two parties can link you. Mediators queue sealed messages and relay calls without reading either.
+- **Private by design.** Every contact gets a DID of its own, so no two parties can link you. Mediators queue sealed messages without reading them.
 - **Built on open standards.** W3C DIDs and Verifiable Credentials, DIDComm v2.0 and its protocols, and the Agent2Agent (A2A) protocol — no proprietary lock-in.
 - **Everywhere.** One wallet for Android, iOS, macOS, Linux and Windows.
 
@@ -28,11 +28,11 @@ Identity has to outlive the cryptography it rests on. Alongside the platform, Al
 | [develop](https://github.com/almena-id/develop) | The whole network on one machine, behind a single Caddy, for local development. |
 | [docu](https://github.com/almena-id/docu) | The documentation site at [docs.almena.id](https://docs.almena.id): guides and reference for the people and organizations that use the platform, in English and Spanish. Astro + Starlight. |
 | [homebrew-tap](https://github.com/almena-id/homebrew-tap) | The Homebrew tap that installs `almena` on macOS and Linux: `brew install almena-id/tap/almena`. |
-| [mediator](https://github.com/almena-id/mediator) | A DIDComm v2.0 mailbox and relay for wallets, with live pickup, push wake-ups and TURN credentials for calls. Rust. |
+| [mediator](https://github.com/almena-id/mediator) | A DIDComm v2.0 mailbox and relay for wallets, with live pickup and push wake-ups. Rust. |
 | [registry](https://github.com/almena-id/registry) | The web portal where organizations set up their tenant, issuers, verifiers and credential templates. Next.js. |
 | [scoop-bucket](https://github.com/almena-id/scoop-bucket) | The Scoop bucket that installs `almena` on Windows. |
 | [status](https://github.com/almena-id/status) | The status page at [status.almena.id](https://status.almena.id): whether each service of the network works right now, its last 90 days, and announced incidents and maintenance. Next.js. |
-| [wallet](https://github.com/almena-id/wallet) | The Almena Wallet: holds your identity, contacts, messages, calls and credentials. Tauri v2 + React, on mobile and desktop. |
+| [wallet](https://github.com/almena-id/wallet) | The Almena Wallet: holds your identity, contacts, messages and credentials. Tauri v2 + React, on mobile and desktop. |
 
 ## Get involved
 
