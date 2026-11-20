@@ -22,7 +22,7 @@ Identity has to outlive the cryptography it rests on. Alongside the platform, Al
 | Repository | What it is |
 |------------|------------|
 | [agent](https://github.com/almena-id/agent) | The Almena AI agent, reachable by other agents over A2A. Python + Claude. |
-| [almena](https://github.com/almena-id/almena) | The `almena` command-line interface. |
+| [cli](https://github.com/almena-id/cli) | The `almena` command-line interface. |
 | [api](https://github.com/almena-id/api) | The backend behind the registry and the catalog: tenants, DIDs, templates and issuance. FastAPI on PostgreSQL. |
 | [catalog](https://github.com/almena-id/catalog) | The public catalog at [catalog.almena.id](https://catalog.almena.id), where anyone with an Almena wallet finds the services issuers publish to request credentials. Next.js. |
 | [develop](https://github.com/almena-id/develop) | The whole network on one machine, behind a single Caddy, for local development. |
